@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<style>
+    ul 
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        width: 100%;
+    }
+    li 
+    {
+        float: left;
+        margin: 10px;
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .li1 
+    {
+        float: left;
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .time
+    {
+        font-family:cursive;
+        font-size: 20px;
+        text-align:center;
+        float: right;
+    }
+    .day
+    {
+        font-family:cursive;
+        font-size: 20px;
+        float: right;
+    }
+    .img-container
+    {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .bottom-centered 
+    {
+        position: absolute;
+        top: 90%;
+        left: 48%;
+    }
+    .about-section 
+    {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+    }
+    .contact-section
+    {
+        padding: 50px;
+        text-align: center;
+        padding: 0 30px;
+    }
+    .white-space
+    {
+        padding: 15px;
+    }
+    .column
+    {
+        padding:0 8px;
+        width: 32%;
+        float:left;
+        margin-bottom: 16px;
+    }
+    .contact-column
+    {
+        padding:0 15px;
+        width: 48%;
+        float:left;
+        margin-left: 6px;
+    }
+    .contact-container
+    {
+        width:50%;
+    }
+    .about-container 
+    {
+        padding: 0 16px;
+        font-size: larger;
+    }
+    .about-container::after, .row::after 
+    {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /* .card 
+    {
+        position: absolute;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+    } */
+    .card
+    {
+        margin:8px auto;
+        border: solid 5px #00bfa6;
+        text-align: center;
+        background-color:white;		
+        position: center;
+        border-radius: 30px;
+        transition: 0.5s;
+        box-shadow: 0px 0px 24px #5C5696;
+    }
+    .card:hover
+    {
+        box-shadow: 0 8px 100px 0 gray;
+        border-radius: 30px;
+    }
+    fieldset
+    {
+      border-radius: 10px;;
+      width:500px;
+      font: 1rem 'Fira Sans', sans-serif;
+    }
+    input[type=text],input[type=email],input[type=tel]
+    {
+      border-radius: 10px;
+      padding: 12px;
+      position: relative;
+      border: 2px solid #474e5d;
+      width:800px;
+      font-size: large;
+      padding: 15px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    footer 
+    {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+    }
+    .footer-links 
+    {
+      list-style-type: none;
+      text-align: center;
+    }
+    .footer-container 
+    {
+        padding: 0 16px;
+        font-size: larger;
+    }
+@media screen and (max-width: 500px) 
+{
+    ul 
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        width: 100%;
+    }
+    li 
+    {
+        float: left;
+        margin: 10px;
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .li1 
+    {
+        float: left;
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .time
+    {
+        font-family:cursive;
+        font-size: 20px;
+        text-align:center;
+        float: right;
+    }
+    .day
+    {
+        font-family:cursive;
+        font-size: 20px;
+        float: right;
+    }
+    .img-container
+    {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .bottom-centered 
+    {
+        position: absolute;
+        top: 90%;
+        left: 48%;
+    }
+    .about-section 
+    {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+    }
+    .contact-section
+    {
+        padding: 50px;
+        text-align: center;
+        padding: 0 30px;
+    }
+    .white-space
+    {
+        padding: 15px;
+    }
+    .column
+    {
+        padding:0 8px;
+        width: 32%;
+        float:left;
+        margin-bottom: 16px;
+    }
+    .contact-column
+    {
+        padding:0 15px;
+        width: 48%;
+        float:left;
+        margin-left: 6px;
+    }
+    .contact-container
+    {
+        width:50%;
+    }
+    .about-container 
+    {
+        padding: 0 16px;
+        font-size: larger;
+    }
+    .about-container::after, .row::after 
+    {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /* .card 
+    {
+        position: absolute;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+    } */
+    .card
+    {
+        margin:8px auto;
+        border: solid 5px #00bfa6;
+        text-align: center;
+        background-color:white;		
+        position: center;
+        border-radius: 30px;
+        transition: 0.5s;
+        box-shadow: 0px 0px 24px #5C5696;
+    }
+    .card:hover
+    {
+        box-shadow: 0 8px 100px 0 gray;
+        border-radius: 30px;
+    }
+    fieldset
+    {
+      border-radius: 10px;;
+      width:500px;
+      font: 1rem 'Fira Sans', sans-serif;
+    }
+    input[type=text],input[type=email],input[type=tel]
+    {
+      border-radius: 10px;
+      padding: 12px;
+      position: relative;
+      border: 2px solid #474e5d;
+      width:800px;
+      font-size: large;
+      padding: 15px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    footer 
+    {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+    }
+    .footer-links 
+    {
+      list-style-type: none;
+      text-align: center;
+    }
+    .footer-container 
+    {
+        padding: 0 16px;
+        font-size: larger;
+    }
+}
+</style>
+<body onload="startTime();carousel();">
+    <section>
+        <ul>
+            <li style="float: right;"><div class="time" id="time"></div></li>
+            <li style="float: right;"><span> • </span></li>
+            <li style="float: right;"><div class="day" id="day"></div></li>
+        </ul>
+    </section>
+    <!-- Navigation -->
+    <nav>
+        <section class="li1">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Links</li>
+            </ul>
+        </section>
+    </nav>
+    <hr size="8" width="90%" color="red"> 
+    <!--Image Section-->
+    <div class="img-container">
+        <section>
+            <img class="mySlides" src="img.jpg"
+            style="width:100%">
+            <div class="bottom-centered">Centered</div>
+            <img class="mySlides" src="img1.jpg"
+            style="width:100%">
+            <img class="mySlides" src="img2.jpg"
+            style="width:100%">
+        </section>
+    </div>
+    <!--Additional Space-->
+    <div class="white-space">
+        <br/>
+    </div>
+    <!--About Section-->
+    <div class="about-section">
+        <h1>About Us</h1>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="" alt="Jane" style="width:100%;border-radius: 30px;">
+                <div class="about-container">
+                <h2>Ravi Kumar Ranjan</h2>
+                <p class="title">Front End Designer</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>jane@example.com</p>
+                <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="" alt="Jane" style="width:100%;border-radius: 30px;">
+                <div class="about-container">
+                <h2>Muni Prashanth</h2>
+                <p class="title">Java Full Stack Development</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>jane@example.com</p>
+                <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="" alt="Jane" style="width:100%;border-radius: 30px;">
+                <div class="about-container">
+                <h2>Venkatesh Kumar</h2>
+                <p class="title">Creation Modules</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>jane@example.com</p>
+                <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Additional Space-->
+    <div class="white-space">
+        <br/>
+    </div>
+    <!--Contact Section-->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="contact-column">
+        <div class="contact-container">
+            <ul>
+                <li><input type="text" id="t1" placeholder="Name"/></li>
+                <li><input type="email" id="t3" placeholder="Subject"/></li>
+            </ul>
+        </div>
+    </div>
+    <div class="contact-column">
+        <div class="contact-container">
+            <ul>
+                <li><input type="text" id="t2" placeholder="Email"/></li>
+                <li><input type="text" id="t4" placeholder="Message"/></li>
+            </ul>
+                <!-- <textarea id="t6" rows="4" cols="50" style="border-radius: 12px" required></textarea> -->
+            <!-- </fieldset> -->
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <h1>My Links</h1>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li>Hello World</li>
+                <li>Hello World</li>
+            </ul>
+            <p>Links 1</p>
+            <p>Links 2</p>
+        </div>
+        <p>Author: Hege Refsnes<br>
+            <a href="mailto:hege@example.com">hege@example.com</a></p>
+    </footer>
+</body>
+<script>
+var myIndex = 0;
+function carousel() 
+{
+    var i;
+    var x=document.getElementsByClassName("mySlides");
+    for (i=0;i<x.length;i++) 
+    {
+        x[i].style.display="none";
+    }
+    myIndex++;
+    if(myIndex>x.length)
+    {
+        myIndex = 1
+    }
+    x[myIndex-1].style.display="block";
+    setTimeout(carousel,3000);
+}
+function startTime()
+{
+    var date=new Date(); 
+    var hh=date.getHours();
+    var mm=date.getMinutes();
+    var ss=date.getSeconds();
+    var session="AM";
+    if(hh==0)
+    {
+        hh=12;
+    }
+    if(hh>12)
+    {
+         hh=hh-12;
+        session="PM";
+    }
+    let time=checkTime(hh)+":"+checkTime(mm)+":"+checkTime(ss)+" "+session;
+    document.getElementById("time").innerText=time; 
+    var text=date.toDateString();
+	document.getElementById("day").innerHTML=text;
+    t=setTimeout('startTime()', 500);
+}
+function checkTime(i)
+{
+    if(i<10)
+    {
+        i="0"+i;
+    }
+    return i;
+}
+</script>
+</html>
